@@ -1,17 +1,21 @@
+import CMCTable from "../components/cmc-table/CmcTable";
 import Header from "../components/Header";
+import SwapCryptoModal from "../components/SwapCryptoModal";
+import Trending from "../components/Trending";
 
 const Home = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className='mt-10'>
-        Trending
+      <SwapCryptoModal />
+      <div className="mt-10">
+        <Trending />
       </div>
-      <div className='mt-20'>
-        CMCTable
+      <div className="mt-20">
+        <CMCTable />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;

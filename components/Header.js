@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
-import Search from '../assets/svg/search';
+import Search from "../assets/svg/search";
+import { ConnectButton } from "web3uikit";
 
 const styles = {
   navLink: `text-white flex mx-[10px]`,
@@ -17,14 +19,18 @@ const styles = {
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Image
-        alt=""
-        src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
-        width={220}
-        height={220}
-      />
+      <Link href="/">
+        <a>
+          <Image
+            alt=""
+            src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
+            width={220}
+            height={25}
+          />
+        </a>
+      </Link>
 
-<div className={styles.headerWrapper}>
+      <div className={styles.headerWrapper}>
         <nav className={styles.nav}>
           <div className={styles.navItem}>
             <div className={styles.navLink}>Cryptocurrencies</div>
@@ -63,10 +69,11 @@ const Header = () => {
           </div>
         </nav>
 
-        <div className='flex items-center'>
+        <div className="flex items-center">
+          <ConnectButton />
           <div className={styles.inputContainer}>
             <Search />
-            <input className={styles.input} placeholder='Search' />
+            <input className={styles.input} placeholder="Search" />
           </div>
         </div>
       </div>
