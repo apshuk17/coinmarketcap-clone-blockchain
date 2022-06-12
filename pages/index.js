@@ -1,4 +1,4 @@
-import CMCTable from "../components/cmc-table/CmcTable";
+import CMCTable from "../components/cmc-table/CMCTable";
 import Header from "../components/Header";
 import SwapCryptoModal from "../components/SwapCryptoModal";
 import Trending from "../components/Trending";
